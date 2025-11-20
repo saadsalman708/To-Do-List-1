@@ -2,20 +2,121 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     /* border: 1px solid; */
 }
 
-#body {
-    width: 100%;
+body {
+    background: linear-gradient(135deg, #c9d6ff, #e2e2e2);
+}
+
+.containerParent {
     display: flex;
     justify-content: center;
-    margin-top: 33dvh;
+    padding-top: 33dvh;
+}
+
+#container {
+    width: 30vw;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.buttonContainer {
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.buttonContainer button {
+    padding: 20px 40px;
+}
+
+button {
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+button#deleteBtn {
+    background-color: rgb(255, 52, 52);
 }
 
 #list {
+    width: 100%;
     height: auto;
     max-height: 30dvh;
     overflow-y: auto;
     overscroll-behavior: smooth;
     scrollbar-width: none;
+}
+
+li {
+    width: 100%;
+    word-break: break-word;
+    background-color: rgb(233, 233, 233);
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.liText {
+    flex: 1;
+}
+
+.liBtnContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1080px) {
+    #container {
+        width: 50vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    #container {
+        width: 80vw;
+    }
+
+    .buttonContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
 }

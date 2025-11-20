@@ -12,6 +12,7 @@ function addTask() {
 
     if (addBtn.textContent != "Add") {
         addBtn.textContent = "Add";
+        clearBtn.textContent = "Clear All";
     }
 
     var inputTxt = input.value.trim();
@@ -45,7 +46,7 @@ function showList() {
 
         var li = document.createElement("li");
 
-        li.innerHTML = tasks[i] + '<button class="editBtn" onClick="editLi(' + i + ')">Edit</button><button class="deleteBtn" onClick="deleteLi(' + i + ')">Delete</button>';
+        li.innerHTML = '<div class="liText">' + tasks[i] + '</div><div class="liBtnContainer"><button id="editBtn" onClick="editLi(' + i + ')">Edit</button><button id="deleteBtn" onClick="deleteLi(' + i + ')">Delete</button></div>';
 
         list.appendChild(li);
     }
